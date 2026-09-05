@@ -1,0 +1,30 @@
+"use client";
+
+import { useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import Swal from "sweetalert2";
+
+export default function SuccessAlert() {
+
+    const searchParams = useSearchParams();
+    const router = useRouter();
+
+    useEffect(() => {
+
+        if (searchParams.get("success") === "create") {
+
+            Swal.fire({
+                title: "เพิ่มข้อมูลสำเร็จ",
+                text: "บันทึกสินค้าเรียบร้อยแล้ว",
+                icon: "success",
+                confirmButtonText: "ตกลง"
+            });
+
+            // ลบ ?success=create ออกจาก URL
+            router.replace("/admin/products");
+        }
+
+    }, [searchParams, router]);
+
+    return null;
+}

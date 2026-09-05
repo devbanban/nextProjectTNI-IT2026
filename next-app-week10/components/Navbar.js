@@ -32,8 +32,8 @@ export default function Navbar() {
                             About
                         </Link>
 
-                        <Link className="nav-link text-white" href="/products/create">
-                           + Products
+                         <Link className="nav-link text-white" href="/admin/products">
+                                        + เพิ่มสินค้า
                         </Link>
 
                         <Link className="nav-link text-white" href="/contact">

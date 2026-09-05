@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Navbar() {
+export default function NavbarAdmin() {
     return (
-        <nav className="navbar navbar-expand-lg  bg-success">
+        <nav className="navbar navbar-expand-lg  bg-danger">
             <div className="container">
 
                 <Link className="navbar-brand text-white" href="/">
@@ -24,21 +24,17 @@ export default function Navbar() {
                 >
                     <div className="navbar-nav ms-auto">
 
-                        <Link className="nav-link text-white" href="/">
+                        <Link className="nav-link text-white" href="/admin">
                             Home
                         </Link>
 
-                        <Link className="nav-link text-white" href="/about">
-                            About
+                         <Link className="nav-link text-white" href="/admin/products">
+                                        สินค้า
                         </Link>
 
-                        <Link className="nav-link text-white" href="/products/create">
-                           + Products
-                        </Link>
+                        
 
-                        <Link className="nav-link text-white" href="/contact">
-                            Contact
-                        </Link>
+                         
 
                     </div>
                 </div>
